@@ -239,7 +239,7 @@ function Home() {
           <img src={imageUrl} alt="" />
         </div>
         <div style={{ marginLeft: "5vh" }}>
-          <div style={{ fontSize: "4vh" }}>About MANIPE...</div>
+          <div style={{ fontSize: "4vh" }}>About MANIPE5...</div>
           <div style={{ fontSize: "9vh" }}>
             Make Your Transactions Quick and Easy...
           </div>
