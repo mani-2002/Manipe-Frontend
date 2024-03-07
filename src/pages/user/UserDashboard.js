@@ -109,7 +109,7 @@ const UserDashboard = ({ onLogout }) => {
     try {
       // Make the fetch request to the server
       const response = await fetch(
-        "https://manipe-b4st.onrender.com/api/link-bank-account",
+        "https://manipe-backend-production.up.railway.app/api/link-bank-account",
         {
           method: "POST",
           headers: {
@@ -162,7 +162,7 @@ const UserDashboard = ({ onLogout }) => {
   useEffect(() => {
     // Fetch user details from the backend
     const token = localStorage.getItem("token");
-    fetch("https://manipe-b4st.onrender.com/api/user-details", {
+    fetch("https://manipe-backend-production.up.railway.app/api/user-details", {
       method: "GET",
       headers: {
         Authorization: token,
@@ -178,7 +178,7 @@ const UserDashboard = ({ onLogout }) => {
   const handleUnlink = (accountNumber) => {
     const token = localStorage.getItem("token");
     fetch(
-      `https://manipe-b4st.onrender.com/api/delete-account/${accountNumber}`,
+      `https://manipe-backend-production.up.railway.app/api/delete-account/${accountNumber}`,
       {
         method: "DELETE",
         headers: {
@@ -213,7 +213,7 @@ const UserDashboard = ({ onLogout }) => {
     try {
       // Make a fetch request to update the database
       const response = await fetch(
-        "https://manipe-b4st.onrender.com/api/set-primary-account",
+        "https://manipe-backend-production.up.railway.app/api/set-primary-account",
         {
           method: "POST",
           headers: {
@@ -244,7 +244,7 @@ const UserDashboard = ({ onLogout }) => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `https://manipe-b4st.onrender.com/api/balance/${accountNumber}`,
+        `https://manipe-backend-production.up.railway.app/api/balance/${accountNumber}`,
         {
           method: "GET",
           headers: {
@@ -266,7 +266,7 @@ const UserDashboard = ({ onLogout }) => {
   useEffect(() => {
     // Fetch user details from the backend
     const token = localStorage.getItem("token");
-    fetch("https://manipe-b4st.onrender.com/api/user-details", {
+    fetch("https://manipe-backend-production.up.railway.app/api/user-details", {
       method: "GET",
       headers: {
         Authorization: token,
@@ -294,7 +294,7 @@ const UserDashboard = ({ onLogout }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch("https://manipe-b4st.onrender.com/api/user-emails", {
+    fetch("https://manipe-backend-production.up.railway.app/api/user-emails", {
       method: "GET",
       headers: {
         Authorization: token,
@@ -329,7 +329,7 @@ const UserDashboard = ({ onLogout }) => {
     } else {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `https://manipe-b4st.onrender.com/api/user-details/${selectedEmail}`,
+        `https://manipe-backend-production.up.railway.app/api/user-details/${selectedEmail}`,
         {
           method: "GET",
           headers: {
@@ -380,7 +380,7 @@ const UserDashboard = ({ onLogout }) => {
 
     try {
       const response = await fetch(
-        "https://manipe-b4st.onrender.com/transfer",
+        "https://manipe-backend-production.up.railway.app/transfer",
         {
           method: "POST",
           headers: {
@@ -438,7 +438,7 @@ const UserDashboard = ({ onLogout }) => {
 
     try {
       const response = await fetch(
-        "https://manipe-b4st.onrender.com/mob-transfer",
+        "https://manipe-backend-production.up.railway.app/mob-transfer",
         {
           method: "POST",
           headers: {
@@ -497,7 +497,7 @@ const UserDashboard = ({ onLogout }) => {
 
     try {
       const response = await fetch(
-        "https://manipe-b4st.onrender.com/upi-transfer",
+        "https://manipe-backend-production.up.railway.app/upi-transfer",
         {
           method: "POST",
           headers: {
@@ -647,7 +647,7 @@ const UserDashboard = ({ onLogout }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://manipe-b4st.onrender.com/user-transactions`,
+          `https://manipe-backend-production.up.railway.app/user-transactions`,
           {
             method: "GET",
             headers: {

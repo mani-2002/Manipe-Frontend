@@ -28,7 +28,7 @@ function Signup() {
 
     try {
       const response = await fetch(
-        "https://manipe-b4st.onrender.com/register",
+        "https://manipe-backend-production.up.railway.app/register",
         {
           method: "POST",
           headers: {

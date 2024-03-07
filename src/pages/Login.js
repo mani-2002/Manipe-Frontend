@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import React,{useState} from "react"; 
-import axios from 'axios';
-import {jwtDecode} from "jwt-decode";
+import React, { useState } from "react";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Login = ({ onLogin }) => {
-  const LoginGif = "https://content.presentermedia.com/content/animsp/00004000/4077/fall_asleep_at_computer_PA_md_nwm_v2.gif";
+  const LoginGif =
+    "https://content.presentermedia.com/content/animsp/00004000/4077/fall_asleep_at_computer_PA_md_nwm_v2.gif";
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
@@ -19,7 +20,10 @@ const Login = ({ onLogin }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://manipe-b4st.onrender.com/login", formData);
+      const response = await axios.post(
+        "https://manipe-backend-production.up.railway.app/login",
+        formData
+      );
       const { token } = response.data;
 
       localStorage.setItem("token", token);
@@ -84,7 +88,7 @@ const Login = ({ onLogin }) => {
             </button>
           </form>
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-          <p style={{ textAlign: 'center' }}>
+          <p style={{ textAlign: "center" }}>
             <a href="/">Forgot password?</a>
           </p>
           <span className="m-1">Does not have an account yet?</span>
