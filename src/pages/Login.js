@@ -21,7 +21,7 @@ const Login = ({ onLogin }) => {
 
     try {
       const response = await axios.post(
-        "https://manipe-backend-production.up.railway.app/login",
+        "https://manipe-backend.onrender.com/login",
         formData
       );
       const { token } = response.data;

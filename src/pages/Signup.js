@@ -27,16 +27,13 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await fetch(
-        "https://manipe-backend-production.up.railway.app/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("https://manipe-backend.onrender.com/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const data = await response.json();
 
