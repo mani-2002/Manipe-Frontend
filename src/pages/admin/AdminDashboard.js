@@ -114,14 +114,11 @@ const AdminDashboard = ({ onLogout }) => {
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
     const token = localStorage.getItem("token");
-    fetch(
-      "https://manipe-backend.onrender.com/transaction-history",
-      {
-        headers: {
-          authorization: token,
-        },
-      }
-    )
+    fetch("https://manipe-backend.onrender.com/transaction-history", {
+      headers: {
+        authorization: token,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setTransactions(data);
@@ -875,7 +872,7 @@ const AdminDashboard = ({ onLogout }) => {
                       }}
                     >
                       <b>{transaction.from_username}</b>
-                      <span> >>>> </span>
+                      <span>>>></span>
                       <b>{transaction.to_username}</b>
                     </div>
                     <div>
