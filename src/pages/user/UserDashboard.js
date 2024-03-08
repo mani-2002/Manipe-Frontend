@@ -1698,7 +1698,7 @@ const UserDashboard = ({ onLogout }) => {
           )}
           {currentContent === "showAllBanks" && (
             <div>
-              <h1>User Details</h1>
+              <h1>All Linked Bank Accounts</h1>
               {userDetails.length > 0 ? (
                 <table
                   style={{
@@ -1714,10 +1714,6 @@ const UserDashboard = ({ onLogout }) => {
                       </th>
                       <th style={{ border: "1px solid black" }}>Customer ID</th>
                       <th style={{ border: "1px solid black" }}>Upi ID</th>
-                      <th style={{ border: "1px solid black" }}>Balance</th>
-                      <th style={{ border: "1px solid black" }}>
-                        Primary Account
-                      </th>
                       <th style={{ border: "1px solid black" }}>Action</th>
                     </tr>
                   </thead>
@@ -1743,16 +1739,6 @@ const UserDashboard = ({ onLogout }) => {
                           style={{ border: "1px solid black", padding: "8px" }}
                         >
                           {user.upi_id}
-                        </td>
-                        <td
-                          style={{ border: "1px solid black", padding: "8px" }}
-                        >
-                          {user.balance}
-                        </td>
-                        <td
-                          style={{ border: "1px solid black", padding: "8px" }}
-                        >
-                          {user.is_primary ? "Yes" : "No"}
                         </td>
                         <td
                           style={{ border: "1px solid black", padding: "8px" }}
